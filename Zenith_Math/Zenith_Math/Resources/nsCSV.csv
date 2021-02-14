@@ -1,0 +1,68 @@
+Category,ID,Beginner,Novice,Intermediate,Advanced
+Algebra,1001,`,`,1<=acc<=10c |b|<=10,1<=acc<=10c |b|<=10
+Algebra,1002,`,a and or b is a multiple of c,As long as answer is an integer,As long as answer is an integer
+Arithmetic,2001,Up to x 100c up to 3 digit,Up to x 1000,`,`
+Arithmetic,2002,up to 12+12,`,`,`
+Arithmetic,2003,up to 12x12,`,`,`
+Arithmetic,2004,up to 24-12c answer>0,`,`,`
+Arithmetic,2005,up to 12 x 12,`,`,`
+Arithmetic,2006,No carrying,Carrying allowed,Carrying allowed,`
+Arithmetic,2007,No carrying,Positive answersc carrying ok,Negatives allowed,`
+Arithmetic,2008,No carrying,Carrying allowed,`,`
+Arithmetic,2009,No carrying,Carrying allowed,Carrying allowed,`
+Arithmetic,2010,No carrying,Carrying allowed,Carrying allowed,Carrying allowed
+Arithmetic,2011,No carrying,Carrying allowed,`,`
+Arithmetic,2012,No carrying,TBD,TBD,TBD
+Arithmetic,2013,No carrying,Carrying allowed,2 digit by 1 digit,`
+Arithmetic,2014,No carrying :(,Carrying allowed,2 digit by 1 digit,`
+Conversion,7015,`,<= 10 mi,<= 15 mi,<= 20 mi
+Conversion,7016,`,1 digit miles,1 digit miles,TBD
+Conversion,7018,`,`,y,y
+Conversion,7019,`,1 digit,<100,y
+Conversion,7021,`,TBD,y,y
+Conversion,7022,`,`,y,y
+Memorization,11011,`,one digit ^ two digit,two digit ^ two digit,Anything is fine
+Memorization,11012,`,Up to 50^2,Up to 100^2,Up to 100^2
+Memorization,11013,`,`,2 digit number <50,Any 2 digit number
+Multiplication Trick,13019,`,`,`,1443 x 0 mod 7
+Multiplication Trick,13020,`,15 x (0 mod 2)c 2 digit,15 x (0 mod 2)c 3 digit,15 x anythingc 3 digit
+Multiplication Trick,13021,`,16 2/3 x (0 mod 6),16 2/3 x (0 mod 6) 3 digit ok,16 2/3 x (0c3 mod 6) 3 digit ok
+Multiplication Trick,13022,`,25 x (0 mod4)c 2 digit,25 x (0 mod4) 3 digit,25 x anythingc 4 digit
+Multiplication Trick,13023,`,`,3367 x (0 mod 3),3367 x (0 mod 3)
+Multiplication Trick,13024,`,50 x (0 mod 2)c 2 digit,50 x (0 mod 2) 3 digit,50 x anythingc 4 digit
+Multiplication Trick,13025,`,75 x (0 mod 4)c 2 digit,75 x (0 mod 4) 3 digit,75 x anythingc 4 digit
+Multiplication Trick,13026,`,`,`,77 x 0 mod 13
+Multiplication Trick,13027,`,100+-10c times 1 digitc <10,1000+-10c times <30,1000+-10c times <30
+Multiplication Trick,13028,`,Up to 100+-10,200+-10,400+-10
+Multiplication Trick,13029,`,2 x 2 digit,2 x 2 digit,2 x 2 digit
+Multiplication Trick,13030,`,Both are 101-109,101-110 or 1001-1010,101-115 or 1001-1015
+Multiplication Trick,13031,`,One 91-99c other 101-109,10 within 100 or 1000,15 within 100 or 1000
+Multiplication Trick,13032,`,Both are 91-99,91-99 or 991-999,85-99 or 985-999
+Multiplication Trick,13033,`,95 x 95,145 x 145,195 x 195
+Multiplication Trick,13034,`,2 by 2 digit,2 by 2 digit,2 by 2 digit
+Multiplication Trick,13035,`,95 x 95,145 x 145,195 x 195
+Multiplication Trick,13036,`,`,41-59,41-59
+Multiplication Trick,13037,`,`,6 4 6 4,6 4c 7 3c 8 2c 9 1
+Multiplication Trick,13038,`,`,Two digit numbers,Two digit numbers
+Multiplication Trick,13039,`,`,5 to 10,5 to 50
+Multiplication Trick,13040,`,`,5 to 20,5 to 50
+Multiplication Trick,13041,`,`,5 to 20,5 to 50
+Multiplication Trick,13042,`,2 digit x 2 digit,2 digit x 2 digit,3x3 digit fair game
+Multiplication Trick,13044,`,`,I forgot lol,I forgot lol
+Multiplication Trick,13045,`,`,n=2c3c bca<10c c<10,n=2c3c bca<100c c<10
+Multiplication Trick,13046,`,`,a<20,a<50
+Multiplication Trick,13047,`,`,25 x (0 mod4)c 2 digit,25 x (0 mod4) 3 digit
+Multiplication Trick,13048,`,100s,150s,200s
+Number Theory,14001,`,2 numbers,3 numbers,3 numbers
+Number Theory,14002,`,`,B-A<=10 (20 <= B <= 100),B-A<=20 (30 <= B <= 100)
+Number Theory,14003,`,2 numbers,3 numbers,3 numbers
+Number Theory,14008,`,`,`,`
+Number Theory,14009,`,3 digit max,5 digits max,6 digits max
+Number Theory,14010,`,3 digit max,5 digits max,6 digits max
+Number Theory,14011,`,`,`,`
+Number Theory,14012,`,3 digit max,5 digits max,6 digits max
+Number Theory,14013,`,3 digit max,5 digits max,6 digits max
+Number Theory,14014,`,3 digit max,5 digits max,`
+Number Theory,14015,`,3 digit max,5 digits max,6 digits max
+Number Theory,14016,`,3 digit max,5 digits max,6 digits max
+Number Theory,14017,`,3 digit max,5 digits max,6 digits max

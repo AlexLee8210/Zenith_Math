@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:customelements="clr-namespace:Zenith_Math.CustomElements"
+			 xmlns:local="clr-namespace:Zenith_Math"
+             mc:Ignorable="d"
+             x:Class="Zenith_Math.App">
+
+	<Application.BindingContext>
+		<local:MainViewModel/>
+	</Application.BindingContext>
+
+	<Application.Resources>
+		<ResourceDictionary>
+
+			<!--FONT-->
+			<OnPlatform x:TypeArguments="x:String" x:Key="LatoFont">
+				<On Platform="Android"	Value="lato_regular.ttf#Lato"/>
+				<On Platform="iOS"	Value="Lato"/>
+			</OnPlatform>
+
+			<OnPlatform x:TypeArguments="x:String" x:Key="LatoBoldFont">
+				<On Platform="Android"	Value="lato_bold.ttf#Lato"/>
+				<On Platform="iOS"	Value="Lato"/>
+			</OnPlatform>
+			<!--Font-->
+			<Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+				<Style.Triggers>
+					<DataTrigger TargetType="ContentPage" Binding="{Binding IsDark}" Value="False">
+						<Setter Property="BackgroundColor" Value="White"/>
+					</DataTrigger>
+					<DataTrigger TargetType="ContentPage" Binding="{Binding IsDark}" Value="True">
+						<Setter Property="BackgroundColor" Value="Black"/>
+					</DataTrigger>
+				</Style.Triggers>
+			</Style>
+			<Style TargetType="Label">
+				<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+				<Setter Property="TextColor" Value="Black"/>
+				<Style.Triggers>
+					<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+						<Setter Property="TextColor" Value="Black"/>
+					</DataTrigger>
+					<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+						<Setter Property="TextColor" Value="White"/>
+					</DataTrigger>
+				</Style.Triggers>
+			</Style>
+
+			<Style TargetType="Button">
+				<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+				<Setter Property="TextColor" Value="Black"/>
+			</Style>
+
+		</ResourceDictionary>
+
+		<Style x:Key="TitleStyle" TargetType="Label">
+
+			<Setter Property="FontSize" Value="35"/>
+			<Setter Property="HorizontalOptions" Value="Center"/>
+			<Setter Property="VerticalOptions" Value="Center"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="Margin" Value="20, 50, 20, 25"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+
+		</Style>
+
+		<Style x:Key="ButtonStyle" TargetType="Button">
+
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
+			<Setter Property="Margin" Value="20, 10, 20, 10"/>
+			<Setter Property="CornerRadius" Value="12"/>
+			<Setter Property="BackgroundColor" Value="#096eb5"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontSize" Value="25"/>
+			<Setter Property="Padding" Value="15"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+
+		</Style>
+
+		<Style x:Key="GradientButtonStyle" TargetType="customelements:GradientButton">
+
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
+			<Setter Property="Margin" Value="20, 10, 20, 10"/>
+			<Setter Property="CornerRadius" Value="12"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontSize" Value="25"/>
+			<Setter Property="Padding" Value="15"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+			<Setter Property="GradientOrientation" Value="Horizontal"/>
+			<Setter Property="StartColor" Value="#004fcc"/>
+			<Setter Property="EndColor" Value="#00d4e4"/>
+			<Setter Property="BorderColor" Value="DarkSlateGray"/>
+			<Setter Property="BorderWidth" Value="20"/>
+		</Style>
+		<Style x:Key="KeyboardGradientButtonStyle" TargetType="customelements:GradientButton">
+
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="CornerRadius" Value="4"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="Padding" Value="15"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+			<Setter Property="GradientOrientation" Value="Horizontal"/>
+			<Setter Property="StartColor" Value="#004fcc"/>
+			<Setter Property="EndColor" Value="#00d4e4"/>
+		</Style>
+
+		<Style x:Key="TimedButtonStyle" TargetType="Button">
+			<Setter Property="CornerRadius" Value="12"/>
+			<Setter Property="BackgroundColor" Value="#096eb5"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+		</Style>
+
+		<Style x:Key="TimedGradientButtonStyle" TargetType="customelements:GradientButton">
+			<Setter Property="CornerRadius" Value="4"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+			<Setter Property="GradientOrientation" Value="Horizontal"/>
+			<Setter Property="StartColor" Value="#004fcc"/>
+			<Setter Property="EndColor" Value="#00d4e4"/>
+		</Style>
+
+		<Style x:Key="LineStyle" TargetType="BoxView">
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="HeightRequest" Value="2"/>
+			<Setter Property="BackgroundColor" Value="#c0c0c0"/>
+			<Setter Property="Margin" Value="50, 10, 50, 20"/>
+		</Style>
+
+		<Style x:Key="DescStyle" TargetType="Label">
+
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
+			<Setter Property="HorizontalTextAlignment" Value="Center"/>
+			<Setter Property="FontSize"	Value="20"/>
+		</Style>
+
+		<Style x:Key="ResultLabelStyle" TargetType="Label">
+
+			<Setter Property="FontSize" Value="24"/>
+			<Setter Property="HorizontalOptions" Value="Center"/>
+			<Setter Property="VerticalOptions" Value="Center"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="Margin" Value="10, 15, 10, 20"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+			<Setter Property="TextColor" Value="White"/>
+		</Style>
+
+		<Style x:Key="RecordStyle" TargetType="Label">
+
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="HorizontalOptions" Value="Start"/>
+			<Setter Property="VerticalOptions" Value="Center"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="Margin" Value="20, 10, 20, 0"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+
+		</Style>
+
+
+
+	</Application.Resources>
+</Application>

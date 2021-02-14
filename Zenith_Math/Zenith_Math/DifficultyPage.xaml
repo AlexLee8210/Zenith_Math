@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:customelements="clr-namespace:Zenith_Math.CustomElements"
+			 xmlns:local="clr-namespace:Zenith_Math"
+			 mc:Ignorable="d"
+             x:Class="Zenith_Math.DifficultyPage"
+			 NavigationPage.HasNavigationBar="False">
+
+	<StackLayout Margin="0"
+                 x:Name="MainStackLayout">
+		<!--Opacity="0">-->
+		<Label Style="{StaticResource TitleStyle}"
+               x:Name="DifficultyLabel"
+               Text="Choose a Difficulty"/>
+
+		<BoxView Style="{StaticResource LineStyle}"
+				 Margin="0"
+				 HeightRequest="3"/>
+
+		<ScrollView>
+			<StackLayout Spacing="5">
+				<customelements:GradientButton 
+					Style="{StaticResource GradientButtonStyle}"
+                    Text="BEGINNER"
+                    Clicked="ButtonClicked"
+					Margin="20, 20, 20, 10"
+					StartColor="#ff8409"
+					EndColor="#ffd900"/>
+
+				<customelements:GradientButton 
+					Style="{StaticResource GradientButtonStyle}"
+                    Text="NOVICE"
+                    Clicked="ButtonClicked"
+					StartColor="#f72800"
+					EndColor="#f09d00"/>
+
+				<customelements:GradientButton 
+					Style="{StaticResource GradientButtonStyle}"
+                    Text="INTERMEDIATE"
+                    Clicked="ButtonClicked"
+					StartColor="#cc0879"
+					EndColor="#ff6e00"/>
+
+				<customelements:GradientButton 
+					Style="{StaticResource GradientButtonStyle}"
+                    Text="ADVANCED"
+                    Clicked="ButtonClicked"
+					StartColor="#8000bb"
+					EndColor="#d00000"/>
+
+				<customelements:GradientButton 
+						Style="{StaticResource GradientButtonStyle}"
+                        x:Name="BackBtn"
+                        Text="Back"
+                        Clicked="ButtonClicked"
+						Margin="50, 10, 50, 10"/>
+				<ImageButton Source="question.png"
+							 Aspect="AspectFill"
+							 BorderWidth="0"
+							 Padding="0"
+							 Margin="50, 0, 50, 10"
+							 HorizontalOptions="Center"
+							 BackgroundColor="Transparent"
+							 VerticalOptions="CenterAndExpand"
+							 Clicked="QuestionClicked"/>
+			</StackLayout>
+		</ScrollView>
+	</StackLayout>
+</ContentPage>

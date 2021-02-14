@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zenith_Math.StartAnimPage">
+
+	<StackLayout Margin="0"
+                 Orientation="Vertical"
+                 x:Name="MainStackLayout">
+
+		<Label x:Name="Zenith_MathTitle"
+               Text="Zenith Math"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Opacity="0"
+			   FontFamily="{StaticResource LatoBoldFont}"/>
+
+	</StackLayout>
+</ContentPage>
