@@ -18,6 +18,8 @@ namespace Zenith_Math
 	{
 		public MainPage()
 		{
+			this.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#171717"));
+			this.SetValue(NavigationPage.BarTextColorProperty, Color.White);
 			InitializeComponent();
 			//pg = new ProblemGenerator("beginner");
 		}
@@ -56,7 +58,7 @@ namespace Zenith_Math
 		}
 		public void SettingsBtnClicked(System.Object sender, System.EventArgs e)
 		{
-			App.Current.MainPage.Navigation.PushAsync(App.Settings);
+			Application.Current.MainPage.Navigation.PushAsync(App.Settings);
 		}
 		public void InfoBtnClicked(System.Object sender, System.EventArgs e)
 		{
@@ -65,7 +67,7 @@ namespace Zenith_Math
 
 		public void RecordBtnClicked(object sender, System.EventArgs e)
 		{
-			Application.Current.MainPage.Navigation.PushAsync(new NavigationPage(new RecordPage()));
+			Application.Current.MainPage.Navigation.PushAsync(new RecordPage());
 		}
 
 	}

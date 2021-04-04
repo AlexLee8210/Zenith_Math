@@ -40,11 +40,13 @@ namespace Zenith_Math.iOS.CustomRenderer
 					}
 					else if (button.GradientOrientation == GradientButton.GradientOrientationStates.Horizontal)
 					{
-						gradientLayer.StartPoint = new CGPoint(0.5, 0.0);
-						gradientLayer.EndPoint = new CGPoint(0.5, 1.0);
+						gradientLayer.StartPoint = new CGPoint(0.0, 0.5);
+						gradientLayer.EndPoint = new CGPoint(1.0, 0.5);
+						//gradientLayer.StartPoint = new CGPoint(0.5, 0.0);
+						//gradientLayer.EndPoint = new CGPoint(0.5, 1.0);
 					}
 
-					gradientLayer.CornerRadius = button.CornerRadius;
+					gradientLayer.CornerRadius = button.CornerRadius * 5;
 
 					NativeView.Layer.InsertSublayer(gradientLayer, 0);
 				}

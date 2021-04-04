@@ -71,7 +71,8 @@ namespace Zenith_Math.Droid.CustomRenderer
 				button.EndColor.ToAndroid().ToArgb()
 			});
 
-			_gradient.SetCornerRadius(button.CornerRadius * 10);
+			//_gradient.SetCornerRadius(button.CornerRadius * 10);
+			_gradient.SetCornerRadius(120);
 			_gradient.SetStroke(0, button.StartColor.ToAndroid());
 
 			return _gradient;

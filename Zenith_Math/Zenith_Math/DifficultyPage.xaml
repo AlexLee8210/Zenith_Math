@@ -7,7 +7,9 @@
 			 xmlns:local="clr-namespace:Zenith_Math"
 			 mc:Ignorable="d"
              x:Class="Zenith_Math.DifficultyPage"
-			 NavigationPage.HasNavigationBar="False">
+			 NavigationPage.HasNavigationBar="False"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+			 ios:Page.UseSafeArea="true">
 
 	<StackLayout Margin="0"
                  x:Name="MainStackLayout">

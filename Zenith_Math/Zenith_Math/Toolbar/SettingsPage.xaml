@@ -4,18 +4,14 @@
 			 xmlns:local="clr-namespace:Zenith_Math"
 			 xmlns:customelements="clr-namespace:Zenith_Math.CustomElements"
              x:Class="Zenith_Math.Toolbar.SettingsPage"
-			 NavigationPage.HasNavigationBar="false">
+			 NavigationPage.HasNavigationBar="false"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+			 ios:Page.UseSafeArea="true">
 
 	<StackLayout Padding="50, 0, 50, 0">
-		<Label Text="Settings"
-			   FontSize="35"
-			   HorizontalOptions="Center"
-			   VerticalOptions="Center"
-			   FontAttributes="Bold"
-			   Margin="20, 50, 20, 25"
-			   VerticalTextAlignment="Center"
-			   FontFamily="{StaticResource LatoBoldFont}"/>
-
+		<Label Style="{StaticResource TitleStyle}"
+			   Text="Settings"/>
+	
 		<BoxView Style="{StaticResource LineStyle}"
 				 Margin="50, 10, 50, 0"/>
 
@@ -29,15 +25,14 @@
 				<ColumnDefinition Width="50*"/>
 				<ColumnDefinition Width="50*"/>
 			</Grid.ColumnDefinitions>
-			<Label Text="Dark Mode:"
-				   FontSize="20"
-				   HorizontalOptions="Start"
-				   VerticalOptions="Center"/>
+			<Label Grid.Column="0"
+				   Text="Dark Mode:"
+				   Style="{StaticResource SettingsLabelStyle}"/>
 			<Switch Grid.Column="1"
 					HorizontalOptions="End"
 					VerticalOptions="Center"
-					OnColor="#00d4e4"
-					ThumbColor="#1874CD"
+					OnColor="DeepSkyBlue"
+					ThumbColor="GhostWhite"
 					IsToggled="{Binding IsDark}"/>
 		</Grid>
 

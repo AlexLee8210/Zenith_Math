@@ -1,13 +1,13 @@
 ﻿using Zenith_Math.Toolbar;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using SQLite;
+using Zenith_Math.UserData;
 
 namespace Zenith_Math
 {
 	public partial class App : Application
 	{
-		public static String FilePath;
+		public static string FilePath;
 		public static SettingsPage Settings;
 
 		//public App()
@@ -21,16 +21,24 @@ namespace Zenith_Math
 		{
 			InitializeComponent();
 
-			MainPage = new StartAnimPage();
+
+			MainPage = new NavigationPage(new StartAnimPage())
+			{
+				BarBackgroundColor = Color.FromHex("#171717"),
+				BarTextColor = Color.White
+			};
+			
 			FilePath = filePath;
 			Settings = new SettingsPage();
 		}
-
+		
 		protected override void OnStart()
 		{
-
+			using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+			{
+				conn.DropTable<RecordData>();
+			}
 		}
-
 		protected override void OnSleep()
 		{
 		}

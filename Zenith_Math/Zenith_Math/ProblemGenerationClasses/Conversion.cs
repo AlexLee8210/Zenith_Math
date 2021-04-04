@@ -24,8 +24,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_miles = random.Next(2, MAX_MILES + 1);
 			int num_feet = num_miles * 5280;
 			if (miles_to_feet)
-				return Tuple.Create($"{num_miles} mi = ______ ft = ", (double)num_feet);
-			return Tuple.Create($"{num_feet} ft = ______ mi = ", (double)num_miles);
+				return Tuple.Create($"{num_miles} mi = ______ ft", (double)num_feet);
+			return Tuple.Create($"{num_feet} ft = ______ mi", (double)num_miles);
 		}
 
 		// Convert from miles to yards
@@ -42,8 +42,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_miles = random.Next(2, MAX_MILES + 1);
 			int num_yards = num_miles * 1760;
 			if (miles_to_yards)
-				return Tuple.Create($"{num_miles} mi = ______ yd = ", (double)num_yards);
-			return Tuple.Create($"{num_yards} yd = ______ mi = ", (double)num_miles);
+				return Tuple.Create($"{num_miles} mi = ______ yd", (double)num_yards);
+			return Tuple.Create($"{num_yards} yd = ______ mi", (double)num_miles);
 		}
 
 		// Convert from in^2 to ft^2
@@ -60,8 +60,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_ft = random.Next(2, MAX_FT_2 + 1);
 			int num_in = num_ft * 144;
 			if (ft_to_in)
-				return Tuple.Create($"{num_ft} ft = ______ in = ", (double)num_in);
-			return Tuple.Create($"{num_in} in = ______ ft = ", (double)num_ft);
+				return Tuple.Create($"{num_ft} ft = ______ in", (double)num_in);
+			return Tuple.Create($"{num_in} in = ______ ft", (double)num_ft);
 		}
 
 		// Convert from yards to inches
@@ -78,8 +78,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_yards = random.Next(2, MAX_YARDS + 1);
 			int num_inches = num_yards * 36;
 			if (yards_to_inches)
-				return Tuple.Create($"{num_yards} yd = ______ in = ", (double)num_inches);
-			return Tuple.Create($"{num_inches} in = ______ yd = ", (double)num_yards);
+				return Tuple.Create($"{num_yards} yd = ______ in", (double)num_inches);
+			return Tuple.Create($"{num_inches} in = ______ yd", (double)num_yards);
 		}
 
 		// Convert from gross to numbers
@@ -96,8 +96,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_gross = random.Next(2, MAX_GROSS + 1);
 			int num = num_gross * 144;
 			if (gross_to_num)
-				return Tuple.Create($"{num_gross} gross = ______ = ", (double)num);
-			return Tuple.Create($"{num} = ______ gross = ", (double)num_gross);
+				return Tuple.Create($"{num_gross} gross = ______", (double)num);
+			return Tuple.Create($"{num} = ______ gross", (double)num_gross);
 		}
 
 		// Convert from ounces to quarts
@@ -114,8 +114,8 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int num_quarts = random.Next(2, MAX_QUARTS + 1);
 			int num_oz = num_quarts * 32;
 			if (quarts_to_oz)
-				return Tuple.Create($"{num_quarts} quarts = ______ oz = ", (double)num_oz);
-			return Tuple.Create($"{num_oz} oz = ______ quarts = ", (double)num_quarts);
+				return Tuple.Create($"{num_quarts} quarts = ______ oz", (double)num_oz);
+			return Tuple.Create($"{num_oz} oz = ______ quarts", (double)num_quarts);
 		}
 
 	}

@@ -11,8 +11,7 @@ namespace Zenith_Math
         public StartAnimPage()
         {
             InitializeComponent();
-            Toolbar.SettingsPage temp = new Toolbar.SettingsPage();
-            //temp.SetTheme(MainViewModel.Theme.DARK);
+            //Toolbar.SettingsPage temp = new Toolbar.SettingsPage();
             StartUp();
         }
         async void StartUp()

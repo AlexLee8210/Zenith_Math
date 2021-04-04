@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Zenith_Math.QuestionStartAnim">
+             x:Class="Zenith_Math.QuestionStartAnim"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+			 ios:Page.UseSafeArea="true">
 
 	<StackLayout VerticalOptions="CenterAndExpand"
 				 HorizontalOptions="CenterAndExpand"
@@ -10,6 +12,6 @@
 		<Label x:Name="countdown"
 			   Text="3"
 			   FontSize="100"
-			   TextColor="Black"/>
+			   Style="{StaticResource AnimStyle}"/>
 	</StackLayout>
 </ContentPage>

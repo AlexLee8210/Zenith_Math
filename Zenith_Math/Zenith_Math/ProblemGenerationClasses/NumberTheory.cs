@@ -28,7 +28,7 @@ namespace Zenith_Math.ProblemGenerationClasses
 		}
 
 		// Greatest Common Factor
-		public Tuple<string, int> P14001()
+		public Tuple<string, double> P14001()
 		{
 			int ans = random.Next(5, 20);
 			int A = ans * random.Next(2, 13);
@@ -39,17 +39,17 @@ namespace Zenith_Math.ProblemGenerationClasses
 			if (novice)
 			{
 				ans = GCD(A, B);
-				return Tuple.Create($"GCF of {A} and {B} is", ans);
+				return Tuple.Create($"GCF of {A} and {B} is", (double)ans);
 			}
 			int C = B;
 			while (C == B || C == A)
 				C = ans * random.Next(2, 13);
 			ans = GCD(A, GCD(B, C));
-			return Tuple.Create($"GCF of {A}, {B}, and {C} is", ans);
+			return Tuple.Create($"GCF of {A}, {B}, and {C} is", (double)ans);
 		}
 
 		// Primes between A and B (B > A)
-		public Tuple<string, int> P14002()
+		public Tuple<string, double> P14002()
 		{
 			// all primes from 1 to 1000
 			bool[] isPrime = new bool[1001];
@@ -74,11 +74,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				if (isPrime[i])
 					count++;
 			}
-			return Tuple.Create($"How many primes are between {A} and {B} inclusive?", count);
+			return Tuple.Create($"How many primes are between {A} and {B} inclusive?", (double)count);
 		}
 
 		// Lowest Common Multiple
-		public Tuple<string, int> P14003()
+		public Tuple<string, double> P14003()
 		{
 			int A = random.Next(2, 40);
 			int B = A;
@@ -88,25 +88,25 @@ namespace Zenith_Math.ProblemGenerationClasses
 
 			if (novice)
 			{
-				return Tuple.Create($"LCM of {A} and {B} is", ans);
+				return Tuple.Create($"LCM of {A} and {B} is", (double)ans);
 			}
 			int C = B;
 			while (C == B || C == A)
 				C = random.Next(2, 40);
 			ans = LCM(A, LCM(B, C));
-			return Tuple.Create($"LCM of {A}, {B}, and {C} is", ans);
+			return Tuple.Create($"LCM of {A}, {B}, and {C} is", (double)ans);
 		}
 
 		// Remainder when divided by 10
-		public Tuple<string, int> P14008()
+		public Tuple<string, double> P14008()
 		{
 			int num = random.Next(50, 99999999);
 			int res = num % 10;
-			return Tuple.Create($"{num} mod 10 = ", res);
+			return Tuple.Create($"{num} mod 10 = ", (double)res);
 		}
 
 		// Remainder when divided by 11
-		public Tuple<string, int> P14009()
+		public Tuple<string, double> P14009()
 		{
 			int num;
 			if (novice)
@@ -122,11 +122,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 11;
-			return Tuple.Create($"{num} mod 11 = ", res);
+			return Tuple.Create($"{num} mod 11 = ", (double)res);
 		}
 
 		// Remainder when divided by 12
-		public Tuple<string, int> P14010()
+		public Tuple<string, double> P14010()
 		{
 			int num;
 			if (novice)
@@ -142,11 +142,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 12;
-			return Tuple.Create($"{num} mod 12 = ", res);
+			return Tuple.Create($"{num} mod 12 = ", (double)res);
 		}
 
 		// Remainder when divided by 2
-		public Tuple<string, int> P14011()
+		public Tuple<string, double> P14011()
 		{
 			int num;
 			if (novice)
@@ -162,11 +162,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 2;
-			return Tuple.Create($"{num} mod 2 = ", res);
+			return Tuple.Create($"{num} mod 2 = ", (double)res);
 		}
 
 		// Remainder when divided by 3
-		public Tuple<string, int> P14012()
+		public Tuple<string, double> P14012()
 		{
 			int num;
 			if (novice)
@@ -182,11 +182,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 3;
-			return Tuple.Create($"{num} mod 3 = ", res);
+			return Tuple.Create($"{num} mod 3 = ", (double)res);
 		}
 
 		// Remainder when divided by 4
-		public Tuple<string, int> P14013()
+		public Tuple<string, double> P14013()
 		{
 			int num;
 			if (novice)
@@ -202,11 +202,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 4;
-			return Tuple.Create($"{num} mod 4 = ", res);
+			return Tuple.Create($"{num} mod 4 = ", (double)res);
 		}
 
 		// Remainder when divided by 5
-		public Tuple<string, int> P14014()
+		public Tuple<string, double> P14014()
 		{
 			int num;
 			if (novice)
@@ -222,11 +222,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 5;
-			return Tuple.Create($"{num} mod 5 = ", res);
+			return Tuple.Create($"{num} mod 5 = ", (double)res);
 		}
 
 		// Remainder when divided by 6
-		public Tuple<string, int> P14015()
+		public Tuple<string, double> P14015()
 		{
 			int num;
 			if (novice)
@@ -242,11 +242,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 6;
-			return Tuple.Create($"{num} mod 6 = ", res);
+			return Tuple.Create($"{num} mod 6 = ", (double)res);
 		}
 
 		// Remainder when divided by 8
-		public Tuple<string, int> P14016()
+		public Tuple<string, double> P14016()
 		{
 			int num;
 			if (novice)
@@ -262,11 +262,11 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 8;
-			return Tuple.Create($"{num} mod 8 = ", res);
+			return Tuple.Create($"{num} mod 8 = ", (double)res);
 		}
 
 		// Remainder when divided by 9
-		public Tuple<string, int> P14017()
+		public Tuple<string, double> P14017()
 		{
 			int num;
 			if (novice)
@@ -282,7 +282,7 @@ namespace Zenith_Math.ProblemGenerationClasses
 				num = random.Next(1000, 1000000);
 			}
 			int res = num % 9;
-			return Tuple.Create($"{num} mod 9 = ", res);
+			return Tuple.Create($"{num} mod 9 = ", (double)res);
 		}
 	}
 }

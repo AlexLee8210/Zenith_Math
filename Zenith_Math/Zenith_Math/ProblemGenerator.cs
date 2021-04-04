@@ -8,10 +8,8 @@ namespace Zenith_Math
 	class ProblemGenerator
 	{
 		private static ProblemGeneration pg = new ProblemGeneration();
-		private string diff;
 		public ProblemGenerator(string diff)
 		{
-			this.diff = diff;
 			SetDiff(diff);
 		}
 		public ProblemGeneration GetProblemGeneration()

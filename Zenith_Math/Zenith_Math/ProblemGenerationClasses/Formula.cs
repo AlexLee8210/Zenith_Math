@@ -6,26 +6,13 @@ namespace Zenith_Math.ProblemGenerationClasses
 {
 	class Formula : ProblemGeneration
 	{
-		Random random = new Random();
-		private List<Func<Tuple<string, double>>> methods;
-		private string diff;
-		private bool beginner, novice, intermediate, advanced;
-
-		private void GenBools()
+		public Formula()
 		{
-			beginner = diff.Equals("beginner");
-			novice = diff.Equals("novice");
-			intermediate = diff.Equals("intermediate");
-			advanced = diff.Equals("advanced");
+			MakeDiffList(this.GetType(), "Formula", this);
 		}
-		public Tuple<string, double> GenerateProblem()
-		{
-			int numMethods = methods.Count;
 
-			int method = random.Next(0, numMethods);
-			Tuple<string, double> problem = methods[method].Invoke();
-			return problem;
+		public Tuple<string, double> p10001() {
+			return Tuple.Create("Formula", 1.0);
 		}
-		public void SetDiff(string diff) => this.diff = diff;
 	}
 }

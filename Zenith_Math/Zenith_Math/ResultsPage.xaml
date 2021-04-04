@@ -1,16 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Zenith_Math.ResultsPage">
+			 xmlns:customelements="clr-namespace:Zenith_Math.CustomElements"
+             x:Class="Zenith_Math.ResultsPage"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+			 ios:Page.UseSafeArea="true">
 
-	<StackLayout BackgroundColor="White">
+	<StackLayout>
 		<Label Text="Results"
 			   Style="{StaticResource TitleStyle}"/>
-		<Frame CornerRadius="12"
-			   BackgroundColor="#096eb5"
+		<Frame CornerRadius="20"
+			   BackgroundColor="#00cbff"
 			   Margin="50, 20, 50, 20"
 			   Padding="10, 10, 10, 20">
+			<Frame.Background>
+				<LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+					<GradientStop Color="#004fcc"
+                          Offset="0.1"/>
+					<GradientStop Color="#00d4e4"
+                          Offset="1.0"/>
+				</LinearGradientBrush>
+			</Frame.Background>
 			<StackLayout>
+				<Label x:Name="difficultyLabel"
+					   Text="Difficulty: "
+					   Style="{StaticResource ResultLabelStyle}"/>
 				<Label x:Name="numAnsweredLabel"
 					   Text="Questions Answered: "
 					   Style="{StaticResource ResultLabelStyle}"/>
@@ -23,11 +38,12 @@
 			</StackLayout>
 		</Frame>
 
-		<Button Style="{StaticResource ButtonStyle}"
-				Text="Home"
-				Margin="50, 20, 50, 10"
-				Clicked="HomeButtonClick"
-				VerticalOptions="Center"/>
+		<customelements:GradientButton 
+			Style="{StaticResource GradientButtonStyle}"
+			Text="Home"
+			Margin="50, 20, 50, 20"
+			Clicked="HomeButtonClick"
+			VerticalOptions="Center"/>
 	</StackLayout>
 
 </ContentPage>

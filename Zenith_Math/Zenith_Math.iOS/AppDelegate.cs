@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿using System.IO;
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Zenith_Math.iOS
 {
@@ -22,8 +21,16 @@ namespace Zenith_Math.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.SetFlags("Brush_Experimental");
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+            var fileName = "records.db3";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var libraryPath = Path.Combine(folderPath, "..", "Library");
+            var filePath = Path.Combine(libraryPath, fileName);
+
+            LoadApplication(new App(filePath));
+            UIApplication.SharedApplication.StatusBarHidden = true;
 
             return base.FinishedLaunching(app, options);
         }

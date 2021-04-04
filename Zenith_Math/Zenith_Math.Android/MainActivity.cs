@@ -3,10 +3,10 @@
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using System.IO;
+using Xamarin.Forms;
+using Android.Views;
 
 namespace Zenith_Math.Droid
 {
@@ -15,6 +15,8 @@ namespace Zenith_Math.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Forms.SetFlags("Brush_Experimental");
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -27,6 +29,7 @@ namespace Zenith_Math.Droid
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var filePath = Path.Combine(folderPath, fileName);
 
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#171717"));
             LoadApplication(new App(filePath));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

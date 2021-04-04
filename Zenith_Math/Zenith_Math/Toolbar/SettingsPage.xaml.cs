@@ -13,16 +13,14 @@ namespace Zenith_Math.Toolbar
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsPage : ContentPage
 	{
-		private static MainViewModel settingsViewModel = new MainViewModel();
+		
+
 		public SettingsPage()
 		{
 			InitializeComponent();
+
 		}
 
-		public void SetTheme(bool isDark)
-		{
-			settingsViewModel.IsDark = isDark;
-		}
 		public void BackBtnClicked(object sender, EventArgs e)
 		{
 			Application.Current.MainPage.Navigation.PopAsync();

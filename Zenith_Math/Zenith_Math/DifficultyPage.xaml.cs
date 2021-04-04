@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Zenith_Math.CustomElements;
 
 namespace Zenith_Math
 {
@@ -18,6 +19,7 @@ namespace Zenith_Math
         public DifficultyPage(string mode, int time = 0)
         {
             InitializeComponent();
+            
             this.mode = mode;
             this.time = time;
         }

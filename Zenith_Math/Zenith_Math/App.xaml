@@ -25,18 +25,24 @@
 				<On Platform="Android"	Value="lato_bold.ttf#Lato"/>
 				<On Platform="iOS"	Value="Lato"/>
 			</OnPlatform>
-			<!--Font-->
+			<!--Page Color with Dark mode binding-->
 			<Style TargetType="ContentPage" ApplyToDerivedTypes="True">
 				<Style.Triggers>
 					<DataTrigger TargetType="ContentPage" Binding="{Binding IsDark}" Value="False">
 						<Setter Property="BackgroundColor" Value="White"/>
 					</DataTrigger>
 					<DataTrigger TargetType="ContentPage" Binding="{Binding IsDark}" Value="True">
-						<Setter Property="BackgroundColor" Value="Black"/>
+						<Setter Property="BackgroundColor" Value="#171717"/>
 					</DataTrigger>
 				</Style.Triggers>
 			</Style>
+
 			<Style TargetType="Label">
+				<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+				<Setter Property="TextColor" Value="Black"/>
+			</Style>
+
+			<!--<Style TargetType="Label">
 				<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
 				<Setter Property="TextColor" Value="Black"/>
 				<Style.Triggers>
@@ -47,12 +53,7 @@
 						<Setter Property="TextColor" Value="White"/>
 					</DataTrigger>
 				</Style.Triggers>
-			</Style>
-
-			<Style TargetType="Button">
-				<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
-				<Setter Property="TextColor" Value="Black"/>
-			</Style>
+			</Style>-->
 
 		</ResourceDictionary>
 
@@ -66,9 +67,18 @@
 			<Setter Property="VerticalTextAlignment" Value="Center"/>
 			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
 
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
 		</Style>
 
-		<Style x:Key="ButtonStyle" TargetType="Button">
+		<!--<Style x:Key="ButtonStyle" TargetType="Button">
 
 			<Setter Property="HorizontalOptions" Value="Fill"/>
 			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
@@ -81,9 +91,9 @@
 			<Setter Property="FontAttributes" Value="Bold"/>
 			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
 
-		</Style>
+		</Style>-->
 
-		<Style x:Key="GradientButtonStyle" TargetType="customelements:GradientButton">
+		<Style x:Key="LargeGradientButtonStyle" TargetType="customelements:GradientButton">
 
 			<Setter Property="HorizontalOptions" Value="Fill"/>
 			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
@@ -97,9 +107,26 @@
 			<Setter Property="GradientOrientation" Value="Horizontal"/>
 			<Setter Property="StartColor" Value="#004fcc"/>
 			<Setter Property="EndColor" Value="#00d4e4"/>
-			<Setter Property="BorderColor" Value="DarkSlateGray"/>
-			<Setter Property="BorderWidth" Value="20"/>
+
 		</Style>
+
+		<Style x:Key="GradientButtonStyle" TargetType="customelements:GradientButton">
+
+			<Setter Property="HorizontalOptions" Value="Fill"/>
+			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
+			<Setter Property="Margin" Value="20, 10, 20, 10"/>
+			<Setter Property="CornerRadius" Value="6"/>
+			<Setter Property="TextColor" Value="White"/>
+			<Setter Property="FontSize" Value="25"/>
+			<Setter Property="Padding" Value="15"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+			<Setter Property="GradientOrientation" Value="Horizontal"/>
+			<Setter Property="StartColor" Value="#004fcc"/>
+			<Setter Property="EndColor" Value="#00d4e4"/>
+
+		</Style>
+		
 		<Style x:Key="KeyboardGradientButtonStyle" TargetType="customelements:GradientButton">
 
 			<Setter Property="HorizontalOptions" Value="Fill"/>
@@ -145,6 +172,17 @@
 			<Setter Property="VerticalOptions" Value="FillAndExpand"/>
 			<Setter Property="HorizontalTextAlignment" Value="Center"/>
 			<Setter Property="FontSize"	Value="20"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
 		</Style>
 
 		<Style x:Key="ResultLabelStyle" TargetType="Label">
@@ -157,6 +195,7 @@
 			<Setter Property="VerticalTextAlignment" Value="Center"/>
 			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
 			<Setter Property="TextColor" Value="White"/>
+			
 		</Style>
 
 		<Style x:Key="RecordStyle" TargetType="Label">
@@ -169,9 +208,84 @@
 			<Setter Property="VerticalTextAlignment" Value="Center"/>
 			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
 
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
 		</Style>
 
+		<Style x:Key="SettingsLabelStyle" TargetType="Label">
 
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="HorizontalOptions" Value="Start"/>
+			<Setter Property="VerticalOptions" Value="Center"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
+		</Style>
+
+		<Style x:Key="LabelColorBindingStyle" TargetType="Label">
+
+			<Setter Property="FontFamily" Value="{StaticResource LatoFont}"/>
+
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
+		</Style>
+
+		<Style x:Key="AnimStyle" TargetType="Label">
+
+			<Setter Property="FontSize" Value="30"/>
+			<Setter Property="HorizontalOptions" Value="Center"/>
+			<Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+			<Setter Property="FontAttributes" Value="Bold"/>
+			<Setter Property="VerticalTextAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}"/>
+			<Setter Property="TextColor" Value="Black"/>
+
+			<Style.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="TextColor" Value="Black"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Label" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="TextColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
+		</Style>
+
+		<!--<Style x:Key="GridColorChangeStyle" TargetType="Label">
+			<Style.Triggers>
+				<DataTrigger TargetType="Grid" Binding="{Binding IsDark}" Value="True">
+					<Setter Property="BackgroundColor" Value="#171717"/>
+				</DataTrigger>
+				<DataTrigger TargetType="Grid" Binding="{Binding IsDark}" Value="False">
+					<Setter Property="BackgroundColor" Value="White"/>
+				</DataTrigger>
+			</Style.Triggers>
+
+		</Style>-->
 
 	</Application.Resources>
 </Application>

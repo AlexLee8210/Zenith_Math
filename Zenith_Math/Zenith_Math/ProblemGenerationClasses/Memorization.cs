@@ -12,7 +12,7 @@ namespace Zenith_Math.ProblemGenerationClasses
 		}
 
 		// Units digit of x^n
-		public Tuple<string, int> P11011()
+		public Tuple<string, double> P11011()
 		{
 			int MIN_X = 0;
 			int MAX_X = 0;
@@ -44,10 +44,10 @@ namespace Zenith_Math.ProblemGenerationClasses
 			int ans = 1;
 			for (int i = 0; i < num_n; i++)
 				ans = (ans * num_x) % 10;
-			return Tuple.Create($"What is the unit's digit of {num_x}^{num_n}?", ans);
+			return Tuple.Create($"What is the unit's digit of {num_x}^{num_n}?", (double)ans);
 		}
 		// Square roots
-		public Tuple<string, int> P11012()
+		public Tuple<string, double> P11012()
 		{
 			int MIN_X = 0;
 			int MAX_X = 0;
@@ -68,10 +68,10 @@ namespace Zenith_Math.ProblemGenerationClasses
 			}
 			int num = random.Next(MIN_X, MAX_X);
 			int res = num * num;
-			return Tuple.Create($"sqrt({res}) = ", num);
+			return Tuple.Create($"sqrt({res}) = ", (double)num);
 		}
 		// Cube roots
-		public Tuple<string, int> P11013()
+		public Tuple<string, double> P11013()
 		{
 			int MIN_X = 0;
 			int MAX_X = 0;
@@ -92,7 +92,7 @@ namespace Zenith_Math.ProblemGenerationClasses
 			}
 			int num = random.Next(MIN_X, MAX_X);
 			int res = num * num * num;
-			return Tuple.Create($"cbrt({res}) = ", num);
+			return Tuple.Create($"cbrt({res}) = ", (double)num);
 		}
 
 	}

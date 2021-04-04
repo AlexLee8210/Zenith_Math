@@ -15,7 +15,7 @@ namespace Zenith_Math
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class QuestionPage : ContentPage
 	{
-		private string mode, startTime;
+		private string mode, startTime, difficulty;
 		private int hour, min, sec;
 		private ProblemGenerator generator;
 		private double answer;
@@ -44,6 +44,8 @@ namespace Zenith_Math
 			this.mode = mode;
 			problemNum = 0;
 			generator = new ProblemGenerator(diff);
+
+			difficulty = diff;
 
 			numCorrect = 0;
 			problemNum = 1;
@@ -88,7 +90,7 @@ namespace Zenith_Math
 		{
 			if (mode.Equals("timed"))
 				timerString = startTime;
-			App.Current.MainPage = new ResultsPage(mode, problemNum - 1, numCorrect, timerString);
+			Application.Current.MainPage = new ResultsPage(mode, problemNum - 1, numCorrect, difficulty, timerString);
 		}
 
 		private void CountDown()

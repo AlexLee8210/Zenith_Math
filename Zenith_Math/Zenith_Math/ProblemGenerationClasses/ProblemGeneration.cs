@@ -21,7 +21,7 @@ namespace Zenith_Math.ProblemGenerationClasses
 		protected static bool beginner, novice, intermediate, advanced;
 		private static Arithmetic arithmetic = new Arithmetic();
 		private static Algebra algebra = new Algebra();
-		private static Conversion conversion = new Conversion();
+		private static Conversion conversion = new Conversion(); 
 
 		private int numMethods = 0;
 		//ProbGenerators
@@ -85,9 +85,10 @@ namespace Zenith_Math.ProblemGenerationClasses
 				lists[i] = new List<MethodInfo>();
 			}
 
-			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(ProblemGeneration)).Assembly;
 			Stream stream = assembly.GetManifestResourceStream("Zenith_Math.Resources.nsCSV.csv");
-			using (StreamReader reader = new System.IO.StreamReader(stream))
+			//StreamReader reader1 = new StreamReader(stream);
+			using (StreamReader reader = new StreamReader(stream))
 			{
 				bool read = false;
 				reader.ReadLine();
@@ -95,10 +96,10 @@ namespace Zenith_Math.ProblemGenerationClasses
 				{
 					string line = reader.ReadLine();
 					string[] values = line.Split(',');
-					Console.WriteLine(line);
+					//Console.WriteLine(line);
 					if (values[0].Equals(type))
 					{
-						Console.WriteLine("EQUALS");
+						//Console.WriteLine("EQUALS");
 						if (!read)
 							read = true;
 						for (int i = 2; i < values.Length; i++)
@@ -117,10 +118,14 @@ namespace Zenith_Math.ProblemGenerationClasses
 					}
 				}
 				reader.Close();
-				beginnerDict.Add(probClass, lists[0]);
-				noviceDict.Add(probClass, lists[1]);
-				intermediateDict.Add(probClass, lists[2]);
-				advancedDict.Add(probClass, lists[3]);
+				if(lists[0].Count > 0)
+					beginnerDict.Add(probClass, lists[0]);
+				if (lists[1].Count > 0)
+					noviceDict.Add(probClass, lists[1]);
+				if (lists[2].Count > 0)
+					intermediateDict.Add(probClass, lists[2]);
+				if (lists[3].Count > 0)
+					advancedDict.Add(probClass, lists[3]);
 			}
 		}
 	}

@@ -30,7 +30,7 @@ namespace Zenith_Math
 			countdown.Text = "1";
 			await countdown.FadeTo(1, 100);
 			await Task.Delay(900);
-			App.Current.MainPage = new QuestionPage(mode, diff, time);
+			Application.Current.MainPage = new QuestionPage(mode, diff, time);
 		}
 	}
 }

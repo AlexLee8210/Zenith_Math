@@ -4,7 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Zenith_Math.StartAnimPage">
+             x:Class="Zenith_Math.StartAnimPage"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+			 ios:Page.UseSafeArea="true"
+			 NavigationPage.HasNavigationBar="False">
 
 	<StackLayout Margin="0"
                  Orientation="Vertical"
@@ -17,7 +20,7 @@
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                Opacity="0"
-			   FontFamily="{StaticResource LatoBoldFont}"/>
+			   Style="{StaticResource AnimStyle}"/>
 
 	</StackLayout>
 </ContentPage>
