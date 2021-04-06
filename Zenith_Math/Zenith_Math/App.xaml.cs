@@ -34,10 +34,10 @@ namespace Zenith_Math
 		
 		protected override void OnStart()
 		{
-			using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-			{
-				conn.DropTable<RecordData>();
-			}
+			//using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+			//{
+			//	conn.DropTable<RecordData>();
+			//}
 		}
 		protected override void OnSleep()
 		{
